@@ -4,113 +4,192 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
   <title>BrandRadar – Monitoreo de Reputación en Tiempo Real</title>
 
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
 
-  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="css/section-hero.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/section-dashboard.css" />
+  <link rel="stylesheet" href="css/section-testimonials.css" />
 </head>
 
 <body>
 
-
-  <!--  INTEGRANTE 1: HEADER + HERO -->
-
-  <!-- HEADER / NAV -->
   <header class="header">
     <nav class="nav">
-
-      <!-- Logo -->
       <a href="#" class="nav__logo">
-        <img
-          src="assets/images/branradar.png"
-          alt="BrandRadar logo"
-          class="nav__logo-img"
-        />
+        <img src="assets/images/branradar.png" alt="BrandRadar logo" class="nav__logo-img" />
       </a>
 
-      <!-- Links -->
       <ul class="nav__links">
         <li><a href="#features">Características</a></li>
         <li><a href="#benefits">Beneficios</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#testimonials">Testimonios</a></li>
         <li><a href="#pricing">Precios</a></li>
-        <li><a href="#cta">Contacto</a></li>
       </ul>
 
-      <!-- CTA -->
       <a href="#" class="btn btn--primary btn--sm">Empezar ahora →</a>
 
-      <!-- Burger (mobile) -->
       <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
     </nav>
   </header>
 
-  <!-- HERO -->
   <section id="hero">
-
-    <!-- Blobs decorativos -->
     <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
     <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
 
     <div class="hero__inner">
-
-      <!-- Badge -->
-      <div class="hero__badge">
-        ✨Monitoreo en tiempo real
-      </div>
-
-      <!-- Heading -->
+      <div class="hero__badge">✨ Monitoreo en tiempo real</div>
       <h1 class="hero__heading">
         Conoce lo que dicen de tu
         <span class="hero__heading-gradient">marca antes que nadie</span>
       </h1>
-
-      <!-- Subtítulo -->
       <p class="hero__subtext">
         BrandRadar detecta, analiza y clasifica cada mención de tu empresa en internet al instante.<br class="hero__br" />
         Toma decisiones con datos, no con suposiciones.
       </p>
-
-      <!-- Botones -->
       <div class="hero__actions">
-        <a href="#" class="btn btn--primary">Probar gratis →</a>
+        <a href="#dashboard" class="btn btn--primary">Probar gratis →</a>
         <a href="#" class="btn btn--ghost">Cómo funciona</a>
       </div>
-
     </div>
-
   </section>
 
+  <section id="features" style="padding: 100px 5%; text-align: center;">
+      <h2 class="section-title">Características</h2>
+      </section>
 
-  <!--  INTEGRANTE 2: CARACTERÍSTICAS -->
-  <section id="features"></section>
+  <section id="benefits" style="padding: 100px 5%; text-align: center; background: #f9f9f9;">
+      <h2 class="section-title">Beneficios</h2>
+      </section>
 
-  <!--  INTEGRANTE 3: BENEFICIOS -->
-  <section id="benefits"></section>
+<section id="dashboard" class="dashboard-section">
+  <div class="dashboard__container">
+    
+    <div class="dashboard__header-text">
+      <span class="section-tag">Análisis de Reputación</span>
+      <h2 class="section-title">Control total en un solo <span class="text-gradient">Panel</span></h2>
+      <p>Métricas clave de rendimiento y actividad diaria de monitoreo de marca.</p>
+    </div>
 
-  <!--  INTEGRANTE 4: DASHBOARD -->
-  <section id="dashboard"></section>
+    <div class="dashboard__view-final">
+      <div class="app-ui-frame">
+        
+        <aside class="app-sidebar-frame">
+          <div class="logo-simulated"></div>
+          <nav class="sidebar-nav">
+            <div class="nav-icon active"></div> </nav>
+        </aside>
+        
+        <main class="app-content-frame">
+          
+          <header class="app-top-header">
+            <div class="search-simulated"></div>
+            <div class="user-simulated"></div>
+          </header>
 
-  <!--  INTEGRANTE 4: TESTIMONIOS -->
-  <section id="testimonials"></section>
+          <div class="m-card-full sources-header">
+            <span class="m-label-header">Fuentes de Datos Activas (Google Business / Meta APIs)</span>
+          </div>
 
-  <!--  INTEGRANTE 5: PRECIOS -->
-  <section id="pricing"></section>
+          <div class="metrics-row">
+            <div class="metric-line-card">
+              <span class="m-label">Visitas Únicas</span>
+              <span class="m-value">14.5K</span>
+              <div class="m-trend green">+8%</div>
+            </div>
+            <div class="metric-line-card">
+              <span class="m-label">Menciones Hoy</span>
+              <span class="m-value">1,284</span>
+              <div class="m-trend green">+12%</div>
+            </div>
+            <div class="metric-line-card">
+              <span class="m-label">Sentimiento Positivo</span>
+              <span class="m-value">92%</span>
+              <div class="m-trend green">+5%</div>
+            </div>
+          </div>
 
-  <!--  INTEGRANTE 5: CTA FINAL -->
-  <section id="cta"></section>
+          <div class="middle-row-grid">
+            
+            <div class="m-card-medium chart-dispositivos">
+              <div class="m-card-header">Sesiones por Dispositivo</div>
+              <div class="dispositivo-item">
+                <span class="d-label">Desktop</span>
+                <div class="d-bar-bg"><div class="d-bar-fill d-primary" style="width: 65%;"></div></div>
+                <span class="d-pct">65%</span>
+              </div>
+              <div class="dispositivo-item">
+                <span class="d-label">Mobile</span>
+                <div class="d-bar-bg"><div class="d-bar-fill d-secondary" style="width: 30%;"></div></div>
+                <span class="d-pct">30%</span>
+              </div>
+            </div>
 
-  <!--  INTEGRANTE 5: FOOTER -->
-  <footer></footer>
+            <div class="m-card-medium alerts-feed">
+                <div class="m-card-header">Alertas Críticas Recientes</div>
+                <ul class="alerts-list">
+                    <li class="alert-item red">Reseña Negativa Detectada (Google Maps)</li>
+                    <li class="alert-item yellow">Mención Crítica (Twitter)</li>
+                    <li class="alert-item green">Reputación Estable (Instagram)</li>
+                </ul>
+            </div>
+
+          </div>
+
+          <div class="chart-area-big">
+            <div class="chart-header-big">Menciones Diarias de la Semana Actual (Resumen Global)</div>
+            <div class="chart-bars-container">
+              <div class="bar-w"><div class="bar" style="height: 35%"><span class="b-lbl">Lun</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 55%"><span class="b-lbl">Mar</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 90%"><span class="b-lbl">Mie</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 45%"><span class="b-lbl">Jue</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 70%"><span class="b-lbl">Vie</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 95%"><span class="b-lbl">Sab</span></div></div>
+              <div class="bar-w"><div class="bar" style="height: 60%"><span class="b-lbl">Dom</span></div></div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">Opiniones de <span class="text-gradient">Expertos</span></h2>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <p class="testimonial__text">"BrandRadar es clave para nuestra estrategia digital."</p>
+          <div class="testimonial__author"><strong>Carlos Méndez</strong><span>CEO StartupX</span></div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial__text">"La mejor herramienta de monitoreo que hemos usado."</p>
+          <div class="testimonial__author"><strong>Lucía Torres</strong><span>PR Manager</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="padding: 100px 5%; text-align: center;">
+      <h2 class="section-title">Precios</h2>
+  </section>
+
+  <section id="cta" style="padding: 100px 5%; text-align: center; background: var(--br-purple); color: white;">
+      <h2>¿Listo para proteger tu marca?</h2>
+      <a href="#" class="btn btn--primary" style="margin-top: 20px; background: white; color: var(--br-purple);">Empezar Gratis</a>
+  </section>
+
+  <footer style="padding: 50px 5%; text-align: center; border-top: 1px solid #eee;">
+    <p>&copy; 2026 BrandRadar. Todos los derechos reservados.</p>
+  </footer>
 
   <script src="js/section-hero.js"></script>
 </body>
