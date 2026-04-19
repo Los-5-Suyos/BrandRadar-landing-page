@@ -1,4 +1,4 @@
-!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -8,10 +8,11 @@
   <title>BrandRadar – Monitoreo de Reputación en Tiempo Real</title>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
 
   <!-- CSS GLOBAL -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/section-hero.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
@@ -19,70 +20,98 @@
 
   <!--  INTEGRANTE 1: HEADER + HERO -->
 
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <nav class="nav">
+
+      <!-- Logo -->
+      <a href="#" class="nav__logo">
+        <img
+          src="assets/images/branradar.png"
+          alt="BrandRadar logo"
+          class="nav__logo-img"
+        />
+      </a>
+
+      <!-- Links -->
+      <ul class="nav__links">
+        <li><a href="#features">Características</a></li>
+        <li><a href="#benefits">Beneficios</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#cta">Contacto</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="#" class="btn btn--primary btn--sm">Empezar ahora →</a>
+
+      <!-- Burger (mobile) -->
+      <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- HERO -->
   <section id="hero">
 
-    
+    <!-- Blobs decorativos -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+
+      <!-- Badge -->
+      <div class="hero__badge">
+        ✨Monitoreo en tiempo real
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero__heading">
+        Conoce lo que dicen de tu
+        <span class="hero__heading-gradient">marca antes que nadie</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero__subtext">
+        BrandRadar detecta, analiza y clasifica cada mención de tu empresa en internet al instante.<br class="hero__br" />
+        Toma decisiones con datos, no con suposiciones.
+      </p>
+
+      <!-- Botones -->
+      <div class="hero__actions">
+        <a href="#" class="btn btn--primary">Probar gratis →</a>
+        <a href="#" class="btn btn--ghost">Cómo funciona</a>
+      </div>
+
+    </div>
+
   </section>
 
 
   <!--  INTEGRANTE 2: CARACTERÍSTICAS -->
-
-  <section id="features">
-
-    
-  </section>
-
-
+  <section id="features"></section>
 
   <!--  INTEGRANTE 3: BENEFICIOS -->
-
-  <section id="benefits">
-
-    
-  </section>
-
+  <section id="benefits"></section>
 
   <!--  INTEGRANTE 4: DASHBOARD -->
-
-  <section id="dashboard">
-
-    
-  </section>
-
+  <section id="dashboard"></section>
 
   <!--  INTEGRANTE 4: TESTIMONIOS -->
-
-  <section id="testimonials">
-
-    
-  </section>
-
+  <section id="testimonials"></section>
 
   <!--  INTEGRANTE 5: PRECIOS -->
-
-  <section id="pricing">
-
-    
-  </section>
-
-
+  <section id="pricing"></section>
 
   <!--  INTEGRANTE 5: CTA FINAL -->
-
-  <section id="cta">
-
-    
-  </section>
-
-
+  <section id="cta"></section>
 
   <!--  INTEGRANTE 5: FOOTER -->
+  <footer></footer>
 
-  <footer>
-
-    
-  </footer>
-
+  <script src="js/section-hero.js"></script>
 </body>
 </html>
-```
