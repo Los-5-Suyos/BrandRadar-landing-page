@@ -12,6 +12,7 @@
 
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/section-features.css" />
 </head>
 
 <body>
@@ -27,9 +28,90 @@
 
   <!--  INTEGRANTE 2: CARACTERÍSTICAS -->
 
-  <section id="features">
+  <section id="features" class="features-section">
+    <div class="features__header">
+      <span class="features__badge">Características</span>
+      <h2 class="features__title">
+        Todo lo que necesitas para<br />
+        <span class="features__title-gradient">proteger tu marca</span>
+      </h2>
+      <p class="features__subtitle">
+        BrandRadar reúne en una sola plataforma las herramientas
+        que antes requerían cinco softwares distintos.
+      </p>
+    </div>
 
-    
+    <!-- Fila superior: 3 cards -->
+    <div class="features__grid">
+
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <span class="feature-card__num">01</span>
+        <div class="feature-card__icon">🔍</div>
+        <h3 class="feature-card__title">Monitoreo en tiempo real</h3>
+        <p class="feature-card__desc">
+          Rastrea cada mención de tu marca en redes sociales, medios digitales,
+          foros y blogs en el instante en que ocurre. Sin retrasos, sin lagunas.
+        </p>
+        <span class="feature-card__tag">24/7 activo</span>
+      </div>
+
+      <!-- Card 2 – destacada -->
+      <div class="feature-card feature-card--featured">
+        <span class="feature-card__num">02</span>
+        <div class="feature-card__icon">🧠</div>
+        <h3 class="feature-card__title">Análisis de sentimiento con IA</h3>
+        <p class="feature-card__desc">
+          Nuestro modelo entiende el contexto y el sarcasmo en español latinoamericano.
+          Clasifica menciones como positivas, negativas o neutras con más del 94 % de precisión.
+        </p>
+        <span class="feature-card__tag">IA especializada</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card">
+        <span class="feature-card__num">03</span>
+        <div class="feature-card__icon">🚨</div>
+        <h3 class="feature-card__title">Alertas de crisis instantáneas</h3>
+        <p class="feature-card__desc">
+          Recibe notificaciones por correo, Slack o WhatsApp cuando se detecta
+          un pico de menciones negativas. Actúa antes de que escale.
+        </p>
+        <span class="feature-card__tag">Multi-canal</span>
+      </div>
+
+    </div>
+
+    <!-- Fila inferior: 2 cards anchas -->
+    <div class="features__grid--wide">
+
+      <!-- Card 4 -->
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon">📊</div>
+        <div class="feature-card__body">
+          <span class="feature-card__num" style="position:static; display:block; margin-bottom:6px;">04</span>
+          <h3 class="feature-card__title">Reportes automáticos</h3>
+          <p class="feature-card__desc">
+            Genera informes ejecutivos en PDF o Excel con un clic. Compártelos
+            con tu equipo o dirección sin esfuerzo extra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon">🌐</div>
+        <div class="feature-card__body">
+          <span class="feature-card__num" style="position:static; display:block; margin-bottom:6px;">05</span>
+          <h3 class="feature-card__title">Benchmarking competitivo</h3>
+          <p class="feature-card__desc">
+            Compara tu reputación con la de tus competidores. Detecta oportunidades
+            y amenazas en tu industria antes de que lo hagan ellos.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
 
