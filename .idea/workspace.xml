@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="943584db-d7ce-4898-8ae3-b6443cda87ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/css/section-features.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/section-features.css" afterDir="false" />
-    </list>
+    <list default="true" id="943584db-d7ce-4898-8ae3-b6443cda87ba" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1776919677448</updated>
-      <workItem from="1776919679150" duration="309000" />
+      <workItem from="1776919679150" duration="634000" />
     </task>
     <servers />
   </component>
