@@ -89,5 +89,83 @@
 
 /* ── INTEGRANTE 5: Precios + CTA + Footer ── */
 @media (max-width: 768px) {
-  /* sus estilos aquí */
+
+  /* PRICING */
+
+  .pricing {
+    padding: 60px 4%;
+  }
+
+  .pricing__title {
+    font-size: 2rem;
+  }
+
+  .pricing__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .pricing__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing__card {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+  }
+
+  /* CTA */
+
+  .cta {
+    padding: 70px 4%;
+  }
+
+  .cta__title {
+    font-size: 2rem;
+  }
+
+  .cta__text {
+    font-size: 0.95rem;
+  }
+
+  .cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta__buttons .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 40px 4% 20px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer__logo {
+    margin: 0 auto 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .pricing__title {
+    font-size: 1.7rem;
+  }
+
+  .cta__title {
+    font-size: 1.7rem;
+  }
+
 }
