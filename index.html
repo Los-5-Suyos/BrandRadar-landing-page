@@ -1,76 +1,496 @@
-!DOCTYPE html> 
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>BrandRadar – Monitoreo de Reputación en Tiempo Real</title>
+  <title>randRadar – Monitoreo de Reputación en Tiempo Real</title>
 
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
 
-  <!-- CSS GLOBAL -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- CSS GLOAL -->
+  <link rel="stylesheet" href="css/section-hero.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- CSS INTEGRANTE 2 -->
+  <link rel="stylesheet" href="css/section-features.css" />
+
+  <!-- CSS INTEGRANTE 3 -->
+  <link rel="stylesheet" href="css/section-benefits.css" />
+
+  <!-- CSS INTEGRANTE 4 -->
+  <link rel="stylesheet" href="css/section-dashboard.css" />
+  <link rel="stylesheet" href="css/section-testimonials.css" />
+
+  <!-- CSS INTEGRANTE 5 -->
+  <link rel="stylesheet" href="css/section-pricing.css" />
+  <link rel="stylesheet" href="css/section-footer.css" />
 </head>
 
 <body>
 
 
-  <!--  INTEGRANTE 1: HEADER + HERO -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        INTEGRANTE 1: HEADER + HERO
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <nav class="nav">
+
+      <!-- Logo -->
+      <a href="#" class="nav__logo">
+        <img
+          src="assets/images/branradar.png"
+          alt="BrandRadar logo"
+          class="nav__logo-img"
+        />
+      </a>
+
+      <!-- Links -->
+      <ul class="nav__links">
+        <li><a href="#features">Características</a></li>
+        <li><a href="#benefits">Beneficios</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#cta">Contacto</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="#" class="btn btn--primary btn--sm">Empezar ahora →</a>
+
+      <!-- Burger (mobile) -->
+      <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- HERO -->
   <section id="hero">
 
-    
+    <!-- Blobs decorativos -->
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+
+      <!-- Badge -->
+      <div class="hero__badge">
+        ✨Monitoreo en tiempo real
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero__heading">
+        Conoce lo que dicen de tu
+        <span class="hero__heading-gradient">marca antes que nadie</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero__subtext">
+        BrandRadar detecta, analiza y clasifica cada mención de tu empresa en internet al instante.<br class="hero__br" />
+        Toma decisiones con datos, no con suposiciones.
+      </p>
+
+      <!-- Botones -->
+      <div class="hero__actions">
+        <a href="#" class="btn btn--primary">Probar gratis →</a>
+        <a href="#" class="btn btn--ghost">Cómo funciona</a>
+      </div>
+
+    </div>
+
   </section>
 
 
-  <!--  INTEGRANTE 2: CARACTERÍSTICAS -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        INTEGRANTE 2: CARACTERÍSTICAS
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="features" class="features-section">
+    <div class="features__header">
+      <span class="features__badge">Características</span>
+      <h2 class="features__title">
+        Todo lo que necesitas para<br />
+        <span class="features__title-gradient">proteger tu marca</span>
+      </h2>
+      <p class="features__subtitle">
+        BrandRadar reúne en una sola plataforma las herramientas
+        que antes requerían cinco softwares distintos.
+      </p>
+    </div>
 
-  <section id="features">
+    <!-- Fila superior: 3 cards -->
+    <div class="features__grid">
 
-    
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <span class="feature-card__num">01</span>
+        <div class="feature-card__icon">🔍</div>
+        <h3 class="feature-card__title">Monitoreo en tiempo real</h3>
+        <p class="feature-card__desc">
+          Rastrea cada mención de tu marca en redes sociales, medios digitales,
+          foros y blogs en el instante en que ocurre. Sin retrasos, sin lagunas.
+        </p>
+        <span class="feature-card__tag">24/7 activo</span>
+      </div>
+
+      <!-- Card 2 – destacada -->
+      <div class="feature-card feature-card--featured">
+        <span class="feature-card__num">02</span>
+        <div class="feature-card__icon">🧠</div>
+        <h3 class="feature-card__title">Análisis de sentimiento con IA</h3>
+        <p class="feature-card__desc">
+          Nuestro modelo entiende el contexto y el sarcasmo en español latinoamericano.
+          Clasifica menciones como positivas, negativas o neutras con más del 94 % de precisión.
+        </p>
+        <span class="feature-card__tag">IA especializada</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card">
+        <span class="feature-card__num">03</span>
+        <div class="feature-card__icon">🚨</div>
+        <h3 class="feature-card__title">Alertas de crisis instantáneas</h3>
+        <p class="feature-card__desc">
+          Recibe notificaciones por correo, Slack o WhatsApp cuando se detecta
+          un pico de menciones negativas. Actúa antes de que escale.
+        </p>
+        <span class="feature-card__tag">Multi-canal</span>
+      </div>
+
+    </div>
+
+    <!-- Fila inferior: 2 cards anchas -->
+    <div class="features__grid--wide">
+
+      <!-- Card 4 -->
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon">📊</div>
+        <div class="feature-card__body">
+          <span class="feature-card__num" style="position:static; display:block; margin-bottom:6px;">04</span>
+          <h3 class="feature-card__title">Reportes automáticos</h3>
+          <p class="feature-card__desc">
+            Genera informes ejecutivos en PDF o Excel con un clic. Compártelos
+            con tu equipo o dirección sin esfuerzo extra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon">🌐</div>
+        <div class="feature-card__body">
+          <span class="feature-card__num" style="position:static; display:block; margin-bottom:6px;">05</span>
+          <h3 class="feature-card__title">Benchmarking competitivo</h3>
+          <p class="feature-card__desc">
+            Compara tu reputación con la de tus competidores. Detecta oportunidades
+            y amenazas en tu industria antes de que lo hagan ellos.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
 
-
-  <!--  INTEGRANTE 3: BENEFICIOS -->
-
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        INTEGRANTE 3: BENEFICIOS
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section id="benefits">
-
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="badge">BENEFICIOS</div>
+            
+            <h1 class="main-title">Resultados que<br>mueven el negocio</h1>
+            
+            <p class="subtitle">Nuestros clientes reportan mejoras tangibles en los primeros 30 días de uso.</p>
+    
+            <div class="cards-grid">
+                <article class="card">
+                    <span class="stat">70%</span>
+                    <h2 class="card-title">Ahorro de tiempo</h2>
+                    <p class="card-desc">
+                        Elimina el monitoreo manual. Tu equipo de comunicaciones recupera horas valiosas para enfocarse en estrategia y creatividad.
+                    </p>
+                </article>
+    
+                <article class="card">
+                    <span class="stat">5x</span>
+                    <h2 class="card-title">Detección temprana de crisis</h2>
+                    <p class="card-desc">
+                        Identifica señales de crisis hasta 5 veces más rápido que el seguimiento tradicional, dándote ventaja para responder proactivamente.
+                    </p>
+                </article>
+    
+                <article class="card">
+                    <span class="stat">94%</span>
+                    <h2 class="card-title">Precisión en sentimiento</h2>
+                    <p class="card-desc">
+                        IA entrenada específicamente para el español latinoamericano y europeo, con comprensión de modismos, jergas y contexto cultural.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
     
   </section>
 
 
-  <!--  INTEGRANTE 4: DASHBOARD -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      INTEGRANTE 4: DASHBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="dashboard" class="dashboard-section">
+  <div class="dashboard__container">
 
-  <section id="dashboard">
+    <!-- Columna izquierda: texto -->
+    <div class="dashboard__left">
+      <h2 class="dashboard__title">
+        Un dashboard diseñado para la velocidad de decisión
+      </h2>
+      <p class="dashboard__desc">
+        Toda la información que importa en una sola pantalla, sin ruido, sin complejidad innecesaria.
+        Diseñado con y para equipos de marketing y comunicaciones.
+      </p>
+      <ul class="dashboard__checklist">
+        <li><span class="dash-check">✓</span> Resumen ejecutivo en tiempo real</li>
+        <li><span class="dash-check">✓</span> Desglose de menciones por canal y región</li>
+        <li><span class="dash-check">✓</span> Evolución histórica del sentimiento</li>
+        <li><span class="dash-check">✓</span> Feed de alertas priorizado por urgencia</li>
+        <li><span class="dash-check">✓</span> Reportes PDF/Excel exportables al instante</li>
+      </ul>
+    </div>
 
-    
-  </section>
+    <!-- Columna derecha: preview UI -->
+    <div class="dashboard__right">
+      <div class="dash-preview">
+        <!-- Barra de título estilo macOS -->
+        <div class="dash-preview__titlebar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+        </div>
+
+        <!-- Métricas top -->
+        <div class="dash-preview__metrics">
+          <div class="dash-metric">
+            <span class="dash-metric__value">38%</span>
+            <span class="dash-metric__label">+4.2% esta mes</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric__value">72</span>
+            <span class="dash-metric__label">+41 puntos</span>
+          </div>
+        </div>
+
+        <!-- Gráfica de línea simulada -->
+        <div class="dash-preview__chart">
+          <svg viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#a855f7" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,50 C30,45 50,30 80,28 C110,26 130,38 160,22 C190,8 220,15 260,10"
+                  fill="none" stroke="#a855f7" stroke-width="2"/>
+            <path d="M0,50 C30,45 50,30 80,28 C110,26 130,38 160,22 C190,8 220,15 260,10 L260,60 L0,60 Z"
+                  fill="url(#lineGrad)"/>
+          </svg>
+          <span class="dash-preview__chart-label">+64 alcance</span>
+        </div>
+
+        <!-- Alertas simuladas -->
+        <div class="dash-preview__alerts">
+          <div class="dash-alert">
+            <div class="dash-alert__avatar" style="background:#7c3aed;">@</div>
+            <div class="dash-alert__info">
+              <span class="dash-alert__source">@mktg_Jo · Twitter</span>
+              <span class="dash-alert__text">Mención positiva detectada</span>
+            </div>
+            <span class="dash-alert__badge dash-alert__badge--green">Positivo</span>
+          </div>
+          <div class="dash-alert">
+            <div class="dash-alert__avatar" style="background:#2563eb;">JR</div>
+            <div class="dash-alert__info">
+              <span class="dash-alert__source">Juan Ramos · Google</span>
+              <span class="dash-alert__text">Reseña crítica sin respuesta</span>
+            </div>
+            <span class="dash-alert__badge dash-alert__badge--red">Negativo</span>
+          </div>
+          <div class="dash-alert">
+            <div class="dash-alert__avatar" style="background:#0891b2;">EC</div>
+            <div class="dash-alert__info">
+              <span class="dash-alert__source">El Comercio · Prensa</span>
+              <span class="dash-alert__text">Mención en artículo de opinión</span>
+            </div>
+            <span class="dash-alert__badge dash-alert__badge--gray">Neutro</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
-  <!--  INTEGRANTE 4: TESTIMONIOS -->
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      INTEGRANTE 4: TESTIMONIOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="testimonials" class="testimonials-section">
+  <div class="testimonials__container">
 
-  <section id="testimonials">
+    <span class="testimonials__badge">TESTIMONIOS</span>
+    <h2 class="testimonials__title">Lo que dicen quienes ya usan BrandRadar</h2>
 
-    
-  </section>
+    <div class="testimonials__grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <span class="testimonial-card__quote">"</span>
+        <p class="testimonial-card__text">
+          BrandRadar nos permitió detectar una crisis en menos de 3 minutos y responder antes de
+          que se viralizara. Antes nos enterábamos horas después. Es indispensable.
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#7c3aed;">CL</div>
+          <div class="testimonial-card__info">
+            <strong>Carolina López</strong>
+            <span>Directora de Comunicaciones · Grupo Éxito</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <span class="testimonial-card__quote">"</span>
+        <p class="testimonial-card__text">
+          Probamos 4 herramientas distintas y ninguna se acercaba al nivel de precisión en español
+          latinoamericano que tiene BrandRadar. El análisis de sentimiento es espectacular.
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#059669;">AM</div>
+          <div class="testimonial-card__info">
+            <strong>Andrés Morales</strong>
+            <span>Head of Digital · Bancolombia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <span class="testimonial-card__quote">"</span>
+        <p class="testimonial-card__text">
+          Ahorramos más de 20 horas semanales en monitoreo manual. Los reportes automáticos
+          son perfectos para presentar a la alta dirección. Retorno de inversión inmediato.
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#db2777;">PT</div>
+          <div class="testimonial-card__info">
+            <strong>Patricia Torres</strong>
+            <span>CMO · Agencia Omnimedia</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
   <!--  INTEGRANTE 5: PRECIOS -->
 
-  <section id="pricing">
-
+  <section id="pricing" class="pricing">
     
+    <div class="pricing__container">
+
+      <p class="pricing__tag">PRECIOS</p>
+
+      <h2 class="pricing__title">
+        Planes simples,<br>sin sorpresas
+      </h2>
+
+      <p class="pricing__subtitle">
+        Todos los planes incluyen 14 días gratis. Sin tarjeta de crédito requerida.
+      </p>
+
+      <div class="pricing__cards">
+
+        <!-- STARTER -->
+        <div class="pricing__card pricing__card--light">
+          <p class="pricing__plan">STARTER</p>
+          <h3 class="pricing__price">$49</h3>
+          <span class="pricing__time">/ mes por marca</span>
+
+          <ul class="pricing__list">
+            <li>✔ 1 marca monitoreada</li>
+            <li>✔ 10,000 menciones/mes</li>
+            <li>✔ 5 canales digitales</li>
+            <li>✔ Alertas por email</li>
+            <li>✔ Dashboard básico</li>
+            <li>✔ Soporte por chat</li>
+          </ul>
+
+          <a href="#" class="btn btn--outline">Empezar gratis</a>
+        </div>
+
+        <!-- PRO -->
+        <div class="pricing__card pricing__card--dark">
+
+        <span class="pricing__badge">Más popular</span>
+
+          <p class="pricing__plan">PRO</p>
+          <h3 class="pricing__price">$149</h3>
+          <span class="pricing__time">/ mes por marca</span>
+
+          <ul class="pricing__list">
+            <li>✔ 3 marcas monitoreadas</li>
+            <li>✔ Menciones ilimitadas</li>
+            <li>✔ 50+ canales y fuentes</li>
+            <li>✔ Alertas multicanal (Slack, WA)</li>
+            <li>✔ Análisis de competidores</li>
+            <li>✔ Reportes automatizados</li>
+            <li>✔ Gestión de crisis</li>
+            <li>✔ Soporte prioritario 24/7</li>
+          </ul>
+
+          <a href="#" class="btn btn--primary">Empezar gratis</a>
+        </div>
+
+      </div>
+
+    </div>
+  
   </section>
 
 
 
   <!--  INTEGRANTE 5: CTA FINAL -->
 
-  <section id="cta">
+  <section id="cta" class="cta">
 
+    <div class="cta__container">
+
+      <h2 class="cta__title">
+        Tu reputación no espera.<br>
+        BrandRadar, tampoco.
+      </h2>
+
+      <p class="cta__text">
+        Únete a más de 1,200 marcas que monitorean su reputación digital en tiempo real.
+        Empieza gratis hoy, sin compromisos.
+      </p>
+
+      <div class="cta__buttons">
+        <a href="#" class="btn btn--primary">Probar gratis 14 días →</a>
+        <a href="#" class="btn btn--ghost">Ver demo</a>
+      </div>
+
+    </div>
     
   </section>
 
@@ -78,10 +498,70 @@
 
   <!--  INTEGRANTE 5: FOOTER -->
 
-  <footer>
+  <footer class="footer">
 
+    <div class="footer__container">
+
+      <!-- Logo + descripción -->
+      <div class="footer__col">
+        <img src="assets/images/branradar.png" alt="BrandRadar" class="footer__logo">
+        <p>
+          La plataforma líder de monitoreo y análisis de reputación digital
+          para marcas y agencias en Latinoamérica.
+        </p>
+      </div>
+
+      <!-- Producto -->
+      <div class="footer__col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#">Características</a></li>
+          <li><a href="#">Integraciones</a></li>
+          <li><a href="#">API Docs</a></li>
+          <li><a href="#">Changelog</a></li>
+          <li><a href="#">Estado del sistema</a></li>
+        </ul>
+      </div>
+
+      <!-- Compañía -->
+      <div class="footer__col">
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="#">Sore nosotros</a></li>
+          <li><a href="#">log</a></li>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Prensa</a></li>
+          <li><a href="#">Empleos</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <ul>
+          <li>hola@randradar.io</li>
+          <li>+51 982 040 488</li>
+          <li>Lima, Perú</li>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="#">Soporte</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__ottom">
+      <p>© 2026 randRadar. Todos los derechos reservados.</p>
+
+      <div class="footer__links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
     
   </footer>
 
+
+  <script src="js/section-hero.js"></script>
 </body>
 </html>

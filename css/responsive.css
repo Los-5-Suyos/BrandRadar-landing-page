@@ -1,1 +1,198 @@
+/* responsive.css  –  Media queries globales
+   BrandRadar Landing Page */
 
+
+/* ── INTEGRANTE 1: Header + Hero ── */
+@media (max-width: 768px) {
+
+  /* Nav */
+    .nav__links,
+    .nav > .btn--sm     { display: none; }
+    .nav__burger        { display: flex; }
+    .nav__logo-img      { height: 42px; }
+
+  /* Hero contenedor */
+    #hero {
+    padding: 32px 4% 60px;
+    min-height: auto;
+    }
+
+    .hero__inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 20px;
+    }
+
+  /* Heading: vuelve a escalar normal y permite wrap */
+    .hero__heading {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+    }
+
+    .hero__heading-line1,
+    .hero__heading-gradient {
+    white-space: normal;
+    }
+
+  /* Subtext: permite wrap en mobile */
+    .hero__subtext {
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.6;
+    text-align: center;
+    }
+
+  /* Botones apilados */
+    .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 28px;
+    font-size: 1rem;
+    }
+
+  /* Blobs más pequeños */
+    .hero__blob--1 { width: 260px; height: 260px; top: -50px; left: -60px; }
+    .hero__blob--2 { width: 240px; height: 240px; bottom: -40px; right: -50px; }
+}
+
+@media (max-width: 480px) {
+
+    .hero__heading {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .hero__subtext {
+    font-size: 0.95rem;
+    }
+}
+
+
+/* ── INTEGRANTE 2: Características ── */
+
+@media (max-width: 900px) {
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 72px 4% 80px;
+    }
+
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features__grid--wide {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card--wide {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .features__header {
+        margin-bottom: 48px;
+    }
+}
+
+
+/* ── INTEGRANTE 3: Beneficios ── */
+@media (max-width: 768px) {
+  /* sus estilos aquí */
+}
+
+/* ── INTEGRANTE 4: Dashboard + Testimonios ── */
+@media (max-width: 768px) {
+  /* sus estilos aquí */
+}
+
+/* ── INTEGRANTE 5: Precios + CTA + Footer ── */
+@media (max-width: 768px) {
+
+  /* PRICING */
+
+  .pricing {
+    padding: 60px 4%;
+  }
+
+  .pricing__title {
+    font-size: 2rem;
+  }
+
+  .pricing__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .pricing__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing__card {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+  }
+
+  /* CTA */
+
+  .cta {
+    padding: 70px 4%;
+  }
+
+  .cta__title {
+    font-size: 2rem;
+  }
+
+  .cta__text {
+    font-size: 0.95rem;
+  }
+
+  .cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta__buttons .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 40px 4% 20px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer__logo {
+    margin: 0 auto 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .pricing__title {
+    font-size: 1.7rem;
+  }
+
+  .cta__title {
+    font-size: 1.7rem;
+  }
+
+}
