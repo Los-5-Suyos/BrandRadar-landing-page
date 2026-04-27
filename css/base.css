@@ -1,0 +1,107 @@
+/* ─── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── VARIABLES ─────────────────────────────────────────────── */
+:root {
+    --br-purple:      #7C3AED;
+    --br-purple-lt:   #A855F7;
+    --br-bg:          #ffffff;
+    --br-text:        #1a1a2e;
+    --br-muted:       #6b7280;
+    --br-border:      rgba(124, 58, 237, 0.18);
+    --font-display:   'Syne', sans-serif;
+    --font-body:      'DM Sans', sans-serif;
+    --pill:           999px;
+    --shadow-btn:     0 4px 24px rgba(124, 58, 237, 0.32);
+    --ease:           cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ─── BODY BASE ─────────────────────────────────────────────── */
+body {
+    font-family: var(--font-body);
+    background: var(--br-bg);
+    color: var(--br-text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ─── SECTION LABELS ─────────────────────────────────────────── */
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--br-purple);
+    background: rgba(124,58,237,.08);
+    border: 1px solid rgba(124,58,237,.18);
+    padding: 6px 16px;
+    border-radius: var(--pill);
+}
+
+/* ─── BUTTONS ────────────────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-radius: var(--pill);
+    padding: 18px 42px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform .22s var(--ease), box-shadow .22s var(--ease);
+}
+.btn--primary {
+    background: linear-gradient(135deg, #4254F7, #B430D3);
+    color: #fff;
+    box-shadow: 0 4px 24px rgba(66, 84, 247, 0.32);
+}
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(180, 48, 211, 0.42); }
+.btn--primary:active { transform: translateY(0); }
+.btn--ghost {
+    background: transparent;
+    color: var(--br-text);
+    border: 1.5px solid var(--br-border);
+}
+.btn--ghost:hover { border-color: var(--br-purple); background: rgba(124, 58, 237, 0.05); transform: translateY(-2px); }
+.btn--ghost-white {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.35);
+}
+.btn--ghost-white:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+.btn--sm { padding: 9px 20px; font-size: 0.875rem; }
+.btn--outline-purple {
+    background: transparent;
+    color: var(--br-purple);
+    border: 1.5px solid var(--br-purple);
+    font-size: 0.9rem;
+    padding: 12px 28px;
+}
+.btn--outline-purple:hover { background: rgba(124,58,237,.06); transform: translateY(-2px); }
+
+/* ─── SCROLL REVEAL ──────────────────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .65s var(--ease), transform .65s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .55s var(--ease), transform .55s var(--ease);
+}
+.reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay: .05s; }
+.reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay: .15s; }
+.reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay: .25s; }
+.reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay: .35s; }
+.reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay: .45s; }
+.reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay: .55s; }

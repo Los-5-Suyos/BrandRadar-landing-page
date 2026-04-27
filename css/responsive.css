@@ -1,198 +1,71 @@
-/* responsive.css  –  Media queries globales
-   BrandRadar Landing Page */
+/* ============================================================
+    RESPONSIVE — responsive.css
+    All breakpoints consolidated here
+   ============================================================ */
 
+/* ─── 1024px ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .features__grid        { grid-template-columns: repeat(2, 1fr); }
+    .benefits__grid        { grid-template-columns: repeat(2, 1fr); }
+    .footer__top           { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .contact-section__inner{ grid-template-columns: 1fr; gap: 48px; }
+    .contact-form-card     { padding: 40px 36px; }
+}
 
-/* ── INTEGRANTE 1: Header + Hero ── */
+/* ─── 768px ──────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+    /* Nav */
+    .nav__links, .nav > .btn--sm { display: none; }
+    .nav__burger  { display: flex; }
+    .nav__logo-img { height: 42px; }
 
-  /* Nav */
-    .nav__links,
-    .nav > .btn--sm     { display: none; }
-    .nav__burger        { display: flex; }
-    .nav__logo-img      { height: 42px; }
-
-  /* Hero contenedor */
-    #hero {
-    padding: 32px 4% 60px;
-    min-height: auto;
-    }
-
-    .hero__inner {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    gap: 20px;
-    }
-
-  /* Heading: vuelve a escalar normal y permite wrap */
-    .hero__heading {
-    font-size: clamp(2rem, 9vw, 3.2rem);
-    }
-
-    .hero__heading-line1,
-    .hero__heading-gradient {
-    white-space: normal;
-    }
-
-  /* Subtext: permite wrap en mobile */
-    .hero__subtext {
-    font-size: 1rem;
-    white-space: normal;
-    line-height: 1.6;
-    text-align: center;
-    }
-
-  /* Botones apilados */
-    .hero__actions {
-    flex-direction: column;
-    width: 100%;
-    }
-
-    .hero__actions .btn {
-    width: 100%;
-    justify-content: center;
-    padding: 16px 28px;
-    font-size: 1rem;
-    }
-
-  /* Blobs más pequeños */
+    /* Hero */
+    #hero { padding: 32px 4% 60px; min-height: auto; }
+    .hero__inner { width: 100%; max-width: 100%; padding: 0; gap: 20px; }
+    .hero__heading { font-size: clamp(2rem, 9vw, 3.2rem); }
+    .hero__subtext { font-size: 1rem; white-space: normal; text-align: center; }
+    .hero__actions { flex-direction: column; width: 100%; }
+    .hero__actions .btn { width: 100%; justify-content: center; padding: 16px 28px; font-size: 1rem; }
     .hero__blob--1 { width: 260px; height: 260px; top: -50px; left: -60px; }
     .hero__blob--2 { width: 240px; height: 240px; bottom: -40px; right: -50px; }
+
+    /* Sections */
+    .features__grid      { grid-template-columns: 1fr; }
+    .benefits__grid      { grid-template-columns: 1fr; }
+    .dashboard__inner    { grid-template-columns: 1fr; gap: 40px; }
+    .testimonials__grid  { grid-template-columns: 1fr; }
+    .pricing__grid       { grid-template-columns: 1fr; }
+    .footer__top         { grid-template-columns: 1fr 1fr; }
+    .footer__bottom      { flex-direction: column; gap: 16px; text-align: center; }
+    .cta__actions        { flex-direction: column; width: 100%; }
+    .cta__actions .btn   { width: 100%; justify-content: center; }
+
+    /* Contact */
+    .contact-section__inner { grid-template-columns: 1fr; }
+    .contact-form-card       { padding: 32px 24px; }
+    .form-row                { grid-template-columns: 1fr; }
+    .contact-hero__title     { font-size: clamp(2rem, 8vw, 3rem); }
 }
 
+/* ─── 480px ──────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-
-    .hero__heading {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
-    }
-
-    .hero__subtext {
-    font-size: 0.95rem;
-    }
+    .hero__heading    { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+    .hero__subtext    { font-size: 0.95rem; }
+    .footer__top      { grid-template-columns: 1fr; }
+    .contact-trust    { flex-direction: column; gap: 12px; }
+    .contact-form-card{ padding: 28px 20px; }
+    .btn              { font-size: 1rem; padding: 15px 28px; }
 }
-
-
-/* ── INTEGRANTE 2: Características ── */
-
-@media (max-width: 900px) {
-    .features__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
-    .features-section {
-        padding: 72px 4% 80px;
+    .lang-toggle {
+        order: 2;
     }
 
-    .features__grid {
-        grid-template-columns: 1fr;
+    .nav__burger {
+        order: 3;
     }
 
-    .features__grid--wide {
-        grid-template-columns: 1fr;
+    .btn--sm {
+        display: none;
     }
-
-    .feature-card--wide {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .features__header {
-        margin-bottom: 48px;
-    }
-}
-
-
-/* ── INTEGRANTE 3: Beneficios ── */
-@media (max-width: 768px) {
-  /* sus estilos aquí */
-}
-
-/* ── INTEGRANTE 4: Dashboard + Testimonios ── */
-@media (max-width: 768px) {
-  /* sus estilos aquí */
-}
-
-/* ── INTEGRANTE 5: Precios + CTA + Footer ── */
-@media (max-width: 768px) {
-
-  /* PRICING */
-
-  .pricing {
-    padding: 60px 4%;
-  }
-
-  .pricing__title {
-    font-size: 2rem;
-  }
-
-  .pricing__subtitle {
-    font-size: 0.95rem;
-  }
-
-  .pricing__cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pricing__card {
-    width: 100%;
-    max-width: 350px;
-    padding: 24px;
-  }
-
-  /* CTA */
-
-  .cta {
-    padding: 70px 4%;
-  }
-
-  .cta__title {
-    font-size: 2rem;
-  }
-
-  .cta__text {
-    font-size: 0.95rem;
-  }
-
-  .cta__buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .cta__buttons .btn {
-    width: 100%;
-    justify-content: center;
-    padding: 16px;
-  }
-
-  /* FOOTER */
-
-  .footer {
-    padding: 40px 4% 20px;
-  }
-
-  .footer__container {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .footer__logo {
-    margin: 0 auto 15px;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .pricing__title {
-    font-size: 1.7rem;
-  }
-
-  .cta__title {
-    font-size: 1.7rem;
-  }
-
 }
