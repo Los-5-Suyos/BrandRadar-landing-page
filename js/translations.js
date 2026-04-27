@@ -1,5 +1,5 @@
 /* ============================================================
-   translations.js — ES / EN content
+    translations.js — ES / EN content
    ============================================================ */
 window.BR_TRANSLATIONS = {
     es: {

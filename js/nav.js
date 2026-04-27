@@ -67,7 +67,8 @@
     const langBtns = document.querySelectorAll('.lang-toggle__opt');
     const currentLang = localStorage.getItem('br-lang') || 'es';
 
-    // Mark active on load
+    // Mark active on load — primero limpiar todos, luego marcar solo el correcto
+    langBtns.forEach(btn => btn.classList.remove('active'));
     langBtns.forEach(btn => {
         if (btn.dataset.lang === currentLang) btn.classList.add('active');
         btn.addEventListener('click', () => {
@@ -78,10 +79,16 @@
         });
     });
 
-    // Apply on page load
-    applyTranslations(currentLang);
+    // Apply on page load — solo si el idioma guardado es distinto al español
+    // (el HTML ya está escrito en español, no hace falta reemplazarlo)
+    if (currentLang !== 'es') {
+        applyTranslations(currentLang);
+    } else {
+        document.documentElement.lang = 'es';
+    }
 
     function applyTranslations(lang) {
+        // Si es español, restaurar el HTML original del diccionario ES
         const dict = window.BR_TRANSLATIONS || {};
         const t = dict[lang] || {};
         document.querySelectorAll('[data-i18n]').forEach(el => {
