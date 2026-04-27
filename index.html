@@ -1,117 +1,309 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
   <title>BrandRadar – Monitoreo de Reputación en Tiempo Real</title>
-
-  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet" />
-
-  <!-- CSS GLOBAL -->
-  <link rel="stylesheet" href="css/section-hero.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+  <!-- CSS modules -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
-
 <body>
-
-
-  <!--  INTEGRANTE 1: HEADER + HERO -->
 
   <!-- HEADER / NAV -->
   <header class="header">
     <nav class="nav">
-
-      <!-- Logo -->
-      <a href="#" class="nav__logo">
+      <a href="index.html" class="nav__logo">
         <img
           src="assets/images/branradar.png"
           alt="BrandRadar logo"
           class="nav__logo-img"
         />
       </a>
-
-      <!-- Links -->
       <ul class="nav__links">
-        <li><a href="#features">Características</a></li>
-        <li><a href="#benefits">Beneficios</a></li>
-        <li><a href="#pricing">Precios</a></li>
-        <li><a href="#cta">Contacto</a></li>
+        <li><a href="#features"      data-i18n="nav.features">Características</a></li>
+        <li><a href="#benefits"      data-i18n="nav.benefits">Beneficios</a></li>
+        <li><a href="#pricing"       data-i18n="nav.pricing">Precios</a></li>
+        <li><a href="contact.html"   data-i18n="nav.contact">Contacto</a></li>
       </ul>
-
-      <!-- CTA -->
-      <a href="#" class="btn btn--primary btn--sm">Empezar ahora →</a>
-
-      <!-- Burger (mobile) -->
+      <!-- Language toggle -->
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <span class="lang-toggle__opt active" data-lang="es">ES</span>
+        <span class="lang-toggle__opt"         data-lang="en">EN</span>
+      </div>
+      <a href="#" class="btn btn--primary btn--sm" data-i18n="nav.cta">Empezar ahora →</a>
       <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
-
     </nav>
   </header>
 
   <!-- HERO -->
   <section id="hero">
-
-    <!-- Blobs decorativos -->
     <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
     <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
-
     <div class="hero__inner">
-
-      <!-- Badge -->
-      <div class="hero__badge">
-        ✨Monitoreo en tiempo real
-      </div>
-
-      <!-- Heading -->
+      <div class="hero__badge" data-i18n="hero.badge">✨ Monitoreo en tiempo real</div>
       <h1 class="hero__heading">
-        Conoce lo que dicen de tu
-        <span class="hero__heading-gradient">marca antes que nadie</span>
+        <span data-i18n="hero.heading1">Conoce lo que dicen de tu</span>
+        <span class="hero__heading-gradient" data-i18n="hero.heading2">marca antes que nadie</span>
       </h1>
-
-      <!-- Subtítulo -->
-      <p class="hero__subtext">
-        BrandRadar detecta, analiza y clasifica cada mención de tu empresa en internet al instante.<br class="hero__br" />
+      <p class="hero__subtext" data-i18n="hero.sub">
+        BrandRadar detecta, analiza y clasifica cada mención de tu empresa en internet al instante.
         Toma decisiones con datos, no con suposiciones.
       </p>
-
-      <!-- Botones -->
       <div class="hero__actions">
-        <a href="#" class="btn btn--primary">Probar gratis →</a>
-        <a href="#" class="btn btn--ghost">Cómo funciona</a>
+        <a href="#" class="btn btn--primary" data-i18n="hero.cta1">Probar gratis →</a>
+        <a href="#" class="btn btn--ghost"   data-i18n="hero.cta2">Cómo funciona</a>
       </div>
-
     </div>
-
   </section>
 
+  <!-- CARACTERÍSTICAS -->
+  <section id="features">
+    <div class="features__inner">
+      <div class="features__header reveal">
+        <span class="section-label" data-i18n="features.label">Características</span>
+        <h2 class="features__title" data-i18n="features.title">Todo lo que tu marca necesita para protegerse</h2>
+        <p class="features__subtitle" data-i18n="features.sub">Una plataforma completa para escuchar, analizar y actuar sobre tu reputación digital sin perder ningún detalle.</p>
+      </div>
+      <div class="features__grid reveal-stagger">
+        <div class="feature-card">
+          <div class="feature-card__icon">🔔</div>
+          <h3 class="feature-card__title" data-i18n="features.card1_title">Alertas en tiempo real</h3>
+          <p class="feature-card__desc"   data-i18n="features.card1_desc">Recibe notificaciones instantáneas por email, Slack o WhatsApp cada vez que alguien menciona tu marca o un cambio ocurre en el sentimiento.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🤖</div>
+          <h3 class="feature-card__title" data-i18n="features.card2_title">Análisis de sentimiento IA</h3>
+          <p class="feature-card__desc"   data-i18n="features.card2_desc">Nuestro motor de inteligencia artificial clasifica cada mención como positiva, negativa o neutral en español y 12 idiomas más.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌐</div>
+          <h3 class="feature-card__title" data-i18n="features.card3_title">Monitoreo multicanal</h3>
+          <p class="feature-card__desc"   data-i18n="features.card3_desc">Rastrea X, Instagram, Facebook, LinkedIn, YouTube, blogs, medios digitales, foros y sitios de reseñas. Todo el fluente en un solo panel.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3 class="feature-card__title" data-i18n="features.card4_title">Dashboards centralizados</h3>
+          <p class="feature-card__desc"   data-i18n="features.card4_desc">Visualiza KPIs, tendencias y el valor de tu reputación en tiempo real. Genera reportes automáticos con tu equipo con un clic.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">⚔️</div>
+          <h3 class="feature-card__title" data-i18n="features.card5_title">Comparación con competidores</h3>
+          <p class="feature-card__desc"   data-i18n="features.card5_desc">Benchmarking competitivo en tiempo real. Compara cómo perciben tu marca frente a los competidores y detecta brechas para responder primero.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🚨</div>
+          <h3 class="feature-card__title" data-i18n="features.card6_title">Gestión de crisis</h3>
+          <p class="feature-card__desc"   data-i18n="features.card6_desc">Protocolo guiado de respuesta a crisis. Accede a playbooks, ejemplos y plantillas personalizadas para que tu equipo sepa exactamente qué hacer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 2: CARACTERÍSTICAS -->
-  <section id="features"></section>
+  <!-- BENEFICIOS (dark) -->
+  <section id="benefits">
+    <div class="benefits__inner">
+      <div class="benefits__header reveal">
+        <span class="section-label" style="background:rgba(168,85,247,.15);color:#c084fc;border-color:rgba(168,85,247,.3);" data-i18n="benefits.label">Beneficios</span>
+        <h2 class="benefits__title" data-i18n="benefits.title">Resultados que mueven el negocio</h2>
+        <p class="benefits__subtitle" data-i18n="benefits.sub">Nuestros clientes reportan mejoras tangibles en los primeros 30 días de uso.</p>
+      </div>
+      <div class="benefits__grid reveal-stagger">
+        <div class="benefit-card">
+          <div class="benefit-card__stat">70%</div>
+          <h3 class="benefit-card__title">Ahorro de tiempo</h3>
+          <p class="benefit-card__desc">Elimina el monitoreo manual. Tu equipo de comunicaciones puede enfocarse en estrategia y creatividad.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__stat">5×</div>
+          <h3 class="benefit-card__title">Detección temprana de crisis</h3>
+          <p class="benefit-card__desc">Identifica señales de crisis hasta 5 veces más rápido que el seguimiento manual, dándote tiempo para responder antes que escale.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__stat">94%</div>
+          <h3 class="benefit-card__title">Precisión en sentimiento</h3>
+          <p class="benefit-card__desc">IA entrenada específicamente para español latinoamericano, con comprensión de modismos, jerga y contexto cultural.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 3: BENEFICIOS -->
-  <section id="benefits"></section>
+  <!-- DASHBOARD -->
+  <section id="dashboard">
+    <div class="dashboard__inner">
+      <div class="dashboard__content reveal">
+        <h2 class="dashboard__title">Un dashboard diseñado para la velocidad de decisión</h2>
+        <p class="dashboard__desc">Toda la información que importa en una sola pantalla, sin ruido, sin complejidad innecesaria. Diseñado con y para equipos de marketing y comunicaciones.</p>
+        <ul class="dashboard__list">
+          <li><span class="pricing-check"></span>Resumen ejecutivo en tiempo real</li>
+          <li><span class="pricing-check"></span>Desglose de menciones por canal y región</li>
+          <li><span class="pricing-check"></span>Evolución histórica del sentimiento</li>
+          <li><span class="pricing-check"></span>Feed de alertas priorizado por agencia</li>
+          <li><span class="pricing-check"></span>Reportes PDF/Excel exportables al instante</li>
+        </ul>
+      </div>
+      <div class="dashboard__visual reveal">
+        <div class="dash-mock">
+          <div class="dash-mock__bar">
+            <div class="dash-mock__dot"></div>
+            <div class="dash-mock__dot"></div>
+            <div class="dash-mock__dot"></div>
+          </div>
+          <div class="dash-mock__stats">
+            <div class="dash-stat">
+              <div class="dash-stat__val">98% <span>↑2%</span></div>
+              <div class="dash-stat__label">Sentiment Score</div>
+            </div>
+            <div class="dash-stat">
+              <div class="dash-stat__val">73 <span style="color:#6b82ff;">new</span></div>
+              <div class="dash-stat__label">Menciones hoy</div>
+            </div>
+          </div>
+          <div class="dash-chart">
+            <div class="dash-chart__label">Tendencia semanal</div>
+            <div class="dash-chart__bars">
+              <div class="dash-chart__bar" style="height:40%"></div>
+              <div class="dash-chart__bar" style="height:60%"></div>
+              <div class="dash-chart__bar" style="height:50%"></div>
+              <div class="dash-chart__bar" style="height:75%"></div>
+              <div class="dash-chart__bar" style="height:55%"></div>
+              <div class="dash-chart__bar" style="height:85%"></div>
+              <div class="dash-chart__bar" style="height:70%"></div>
+            </div>
+          </div>
+          <div class="dash-tags">
+            <span class="dash-tag dash-tag--green">✓ Positivo</span>
+            <span class="dash-tag dash-tag--blue">◉ Neutral</span>
+            <span class="dash-tag dash-tag--red">⚠ Negativo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 4: DASHBOARD -->
-  <section id="dashboard"></section>
+  <!-- TESTIMONIOS -->
+  <section id="testimonials">
+    <div class="testimonials__inner">
+      <div class="testimonials__header reveal">
+        <span class="section-label">Testimonios</span>
+        <h2 class="testimonials__title">Lo que dicen quienes ya usan BrandRadar</h2>
+      </div>
+      <div class="testimonials__grid reveal-stagger">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-card__text">"BrandRadar nos permitió detectar una crisis en menos de 2 horas y responder antes de que se volviera viral. Antes tardábamos días en enterarnos. Ahora lo sabemos instantáneamente."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#4254F7,#B430D3);">CL</div>
+            <div>
+              <div class="testimonial-card__name">Carolina López</div>
+              <div class="testimonial-card__role">Directora de Comunicaciones, BancoAndino</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-card__text">"Probamos 4 herramientas distintas y ninguna lograba la precisión en español latinoamericano que necesitamos. BrandRadar entiende el argot local, los modismos. Es otro nivel."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#059669,#10b981);">AF</div>
+            <div>
+              <div class="testimonial-card__name">Andrés Fuentes</div>
+              <div class="testimonial-card__role">CMO, Retail Falabella Colombia</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-card__text">"Ahorramos más de 20 horas semanales en monitoreo manual. Los reportes automáticos son impecables, y el soporte 24/7 resolvió nuestras dudas de implementación desde el primer día."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444);">NT</div>
+            <div>
+              <div class="testimonial-card__name">Natalia Torres</div>
+              <div class="testimonial-card__role">Gerente de Marca, Grupo Éxito</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 4: TESTIMONIOS -->
-  <section id="testimonials"></section>
+  <!-- PRECIOS -->
+  <section id="pricing">
+    <div class="pricing__inner">
+      <div class="pricing__header reveal">
+        <span class="section-label" data-i18n="pricing.label">Precios</span>
+        <h2 class="pricing__title"   data-i18n="pricing.title">Planes simples, sin sorpresas</h2>
+        <p class="pricing__subtitle" data-i18n="pricing.sub">Todos los planes incluyen 14 días gratis. Sin tarjeta de crédito requerida.</p>
+      </div>
+      <div class="pricing__grid reveal-stagger">
+        <!-- Starter -->
+        <div class="pricing-card pricing-card--starter">
+          <p class="pricing-card__tier">Starter</p>
+          <div class="pricing-card__price"><sup>$</sup>49</div>
+          <p class="pricing-card__period" data-i18n="pricing.period">/ mes · facturado mensualmente</p>
+          <ul class="pricing-card__features">
+            <li><span class="pricing-check"></span>3 marcas monitoreadas</li>
+            <li><span class="pricing-check"></span>10,000 menciones/mes</li>
+            <li><span class="pricing-check"></span>5 canales digitales</li>
+            <li><span class="pricing-check"></span>Alertas por email</li>
+            <li><span class="pricing-check"></span>Dashboard básico</li>
+            <li><span class="pricing-check"></span>Soporte en chat</li>
+          </ul>
+          <a href="#" class="btn btn--outline-purple" data-i18n="pricing.cta_start">Empezar gratis</a>
+        </div>
+        <!-- Pro -->
+        <div class="pricing-card pricing-card--pro">
+          <div class="pricing-badge" data-i18n="pricing.popular">Más popular</div>
+          <p class="pricing-card__tier">Pro</p>
+          <div class="pricing-card__price" style="color:#fff;"><sup>$</sup>149</div>
+          <p class="pricing-card__period" data-i18n="pricing.period">/ mes · facturado mensualmente</p>
+          <ul class="pricing-card__features">
+            <li><span class="pricing-check"></span>Marcas ilimitadas</li>
+            <li><span class="pricing-check"></span>100,000+ menciones/mes</li>
+            <li><span class="pricing-check"></span>Todos los canales (incl. NG)</li>
+            <li><span class="pricing-check"></span>Análisis de competidores</li>
+            <li><span class="pricing-check"></span>Reportes automáticos</li>
+            <li><span class="pricing-check"></span>Integraciones Slack, CRM</li>
+            <li><span class="pricing-check"></span>Soporte prioritario 24/7</li>
+          </ul>
+          <a href="#" class="btn btn--primary" data-i18n="pricing.cta_start">Empezar gratis</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 5: PRECIOS -->
-  <section id="pricing"></section>
+  <!-- CTA FINAL -->
+  <section id="cta">
+    <div class="cta__inner">
+      <h2 class="cta__title reveal" data-i18n="cta.title">Tu reputación no espera.<br><span>BrandRadar, tampoco.</span></h2>
+      <p class="cta__subtitle reveal" data-i18n="cta.sub">Únete a más de 1,200 marcas que monitorean su reputación digital en tiempo real. Empieza gratis hoy, sin compromiso.</p>
+      <div class="cta__actions reveal">
+        <a href="#" class="btn btn--primary"     data-i18n="cta.btn1">Probar gratis 14 días →</a>
+        <a href="#" class="btn btn--ghost-white" data-i18n="cta.btn2">Ver demo</a>
+      </div>
+      <p class="cta__note reveal" data-i18n="cta.note">Sin tarjeta de crédito · Cancela cuando quieras · Soporte en español</p>
+    </div>
+  </section>
 
-  <!--  INTEGRANTE 5: CTA FINAL -->
-  <section id="cta"></section>
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer__copy">© 2026 BrandRadar. Todos los derechos reservados.</p>
+  </footer>
 
-  <!--  INTEGRANTE 5: FOOTER -->
-  <footer></footer>
+  <!-- JS modules (order matters) -->
+  <script src="js/translations.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
 
-  <script src="js/section-hero.js"></script>
 </body>
 </html>
