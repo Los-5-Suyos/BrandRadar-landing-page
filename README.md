@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../assets/images/branradar.png" alt="BrandRadar Logo" width="300"/>
+<img src="public/assets/images/branradar.png" alt="BrandRadar Logo" width="300"/>
 
 ## 🚀 BrandRadar oficial landing page
 
