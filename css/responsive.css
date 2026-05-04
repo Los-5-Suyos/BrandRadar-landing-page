@@ -57,15 +57,15 @@
     .btn              { font-size: 1rem; padding: 15px 28px; }
 }
 @media (max-width: 768px) {
-    .lang-toggle {
-        order: 2;
-    }
+    .lang-toggle  { order: 2; }
+    .nav__burger  { order: 3; }
+    .btn--sm      { display: none; }
 
-    .nav__burger {
-        order: 3;
-    }
 
-    .btn--sm {
-        display: none;
+    .mobile-menu .btn {
+        width: auto;
+        align-self: flex-start;
+        padding: 12px 24px;
+        font-size: 0.95rem;
     }
 }
