@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Registro – BrandRadar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/section.css" />
+    <style>
+        .simple-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .simple-header__logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+        .auth-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 120px);
+            padding: 20px 5%;
+            background: linear-gradient(160deg, #ffffff 0%, #F5F0FF 100%);
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 440px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--br-border);
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.06);
+        }
+        .auth-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .auth-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--br-text);
+            margin-bottom: 8px;
+        }
+        .auth-subtitle {
+            font-size: 0.92rem;
+            color: var(--br-muted);
+        }
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .form-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--br-text);
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1.5px solid rgba(124, 58, 237, 0.2);
+            background: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--br-text);
+            outline: none;
+            transition: border-color .2s var(--ease);
+        }
+        .form-input:focus {
+            border-color: var(--br-purple);
+        }
+        .form-error {
+            font-size: 0.75rem;
+            color: #ef4444;
+            display: none;
+            margin-top: 2px;
+        }
+        .form-group.error .form-input {
+            border-color: #ef4444;
+        }
+        .form-group.error .form-error {
+            display: block;
+        }
+        .btn--submit {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: none;
+            background: var(--br-purple);
+            color: #fff;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-btn);
+            transition: transform .2s var(--ease), filter .2s;
+            margin-top: 8px;
+        }
+        .btn--submit:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.1);
+        }
+        .auth-footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.875rem;
+            color: var(--br-muted);
+        }
+        .auth-footer a {
+            color: var(--br-purple-lt);
+            font-weight: 600;
+        }
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(124, 58, 237, 0.08);
+            padding: 4px 8px;
+            border-radius: var(--pill);
+            border: 1px solid var(--br-border);
+        }
+        .lang-toggle__opt {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: var(--pill);
+            cursor: pointer;
+            color: var(--br-muted);
+            transition: all .2s var(--ease);
+        }
+        .lang-toggle__opt.active {
+            background: var(--br-purple);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="simple-header">
+        <a href="../index.html" class="simple-header__logo">
+            <img src="../assets/images/branradar.png" alt="BrandRadar logo" />
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+            <span class="lang-toggle__opt active" id="es-btn" onclick="setLanguage('es')">ES</span>
+            <span class="lang-toggle__opt" id="en-btn" onclick="setLanguage('en')">EN</span>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 class="auth-title" id="regTitle">Crear una cuenta</h1>
+                <p class="auth-subtitle" id="regSubtitle">Regístrate para empezar a monitorear tu marca.</p>
+            </div>
+            
+            <form id="registerForm" class="auth-form" novalidate>
+                <div class="form-group" id="nameGroup">
+                    <label class="form-label" for="regName" id="labelName">Nombre completo</label>
+                    <input type="text" id="regName" class="form-input" placeholder="Ej. Juan Pérez" required autocomplete="name" />
+                    <span class="form-error" id="errorName">Por favor, ingresa tu nombre completo.</span>
+                </div>
+
+                <div class="form-group" id="emailGroup">
+                    <label class="form-label" for="regEmail" id="labelEmail">Correo electrónico</label>
+                    <input type="email" id="regEmail" class="form-input" placeholder="hola@tudominio.com" required autocomplete="username" />
+                    <span class="form-error" id="errorEmail">Por favor, ingresa un correo electrónico real y válido.</span>
+                </div>
+                
+                <div class="form-group" id="passGroup">
+                    <label class="form-label" for="regPassword" id="labelPass">Contraseña</label>
+                    <input type="password" id="regPassword" class="form-input" placeholder="••••••••" required autocomplete="new-password" />
+                    <span class="form-error" id="errorPass">La contraseña debe tener al menos 6 caracteres.</span>
+                </div>
+
+                <button type="submit" class="btn--submit" id="submitBtn">Registrarse</button>
+            </form>
+
+            <div class="auth-footer">
+                <span id="haveAccount">¿Ya tienes una cuenta?</span> <a href="login.html" id="loginLink">Iniciar sesión</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer__copy">© 2026 BrandRadar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Traducciones
+        const translations = {
+            es: {
+                pageTitle: "Registro – BrandRadar",
+                regTitle: "Crear una cuenta",
+                regSubtitle: "Regístrate para empezar a monitorear tu marca.",
+                labelName: "Nombre completo",
+                errorName: "Por favor, ingresa tu nombre completo.",
+                labelEmail: "Correo electrónico",
+                errorEmail: "Por favor, ingresa un correo electrónico real y válido.",
+                labelPass: "Contraseña",
+                errorPass: "La contraseña debe tener al menos 6 caracteres.",
+                submitBtn: "Registrarse",
+                haveAccount: "¿Ya tienes una cuenta?",
+                loginLink: "Iniciar sesión"
+            },
+            en: {
+                pageTitle: "Sign Up – BrandRadar",
+                regTitle: "Create an account",
+                regSubtitle: "Sign up to start monitoring your brand.",
+                labelName: "Full name",
+                errorName: "Please enter your full name.",
+                labelEmail: "Email address",
+                errorEmail: "Please enter a real and valid email address.",
+                labelPass: "Password",
+                errorPass: "Password must be at least 6 characters long.",
+                submitBtn: "Sign up",
+                haveAccount: "Already have an account?",
+                loginLink: "Sign in"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Cambiar botones visuales
+            document.getElementById('es-btn').classList.toggle('active', lang === 'es');
+            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
+
+            // Traducir
+            document.getElementById('pageTitle').innerText = translations[lang].pageTitle;
+            document.getElementById('regTitle').innerText = translations[lang].regTitle;
+            document.getElementById('regSubtitle').innerText = translations[lang].regSubtitle;
+            document.getElementById('labelName').innerText = translations[lang].labelName;
+            document.getElementById('errorName').innerText = translations[lang].errorName;
+            document.getElementById('labelEmail').innerText = translations[lang].labelEmail;
+            document.getElementById('errorEmail').innerText = translations[lang].errorEmail;
+            document.getElementById('labelPass').innerText = translations[lang].labelPass;
+            document.getElementById('errorPass').innerText = translations[lang].errorPass;
+            document.getElementById('submitBtn').innerText = translations[lang].submitBtn;
+            document.getElementById('haveAccount').innerText = translations[lang].haveAccount;
+            document.getElementById('loginLink').innerText = translations[lang].loginLink;
+        }
+
+        // Validación de datos al enviar
+        const registerForm = document.getElementById('registerForm');
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const name = document.getElementById('regName');
+            const email = document.getElementById('regEmail');
+            const password = document.getElementById('regPassword');
+
+            document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+
+            // Validar nombre
+            if (!name.value || name.value.trim().length < 2) {
+                document.getElementById('nameGroup').classList.add('error');
+                isValid = false;
+            }
+
+            // Validar correo
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!email.value || !emailRegex.test(email.value)) {
+                document.getElementById('emailGroup').classList.add('error');
+                isValid = false;
+            }
+
+            // Validar contraseña
+            if (!password.value || password.value.length < 6) {
+                document.getElementById('passGroup').classList.add('error');
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('¡Registro exitoso! Redirigiendo a la app...');
+            }
+        });
+    </script>
+</body>
+</html>
