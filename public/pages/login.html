@@ -5,171 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="pageTitle">Iniciar Sesión – BrandRadar</title>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    
-    <!-- CSS modules -->
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/nav.css" />
-    <link rel="stylesheet" href="../css/sections.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <style>
-        .simple-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        .simple-header__logo img {
-            height: 48px;
-            width: auto;
-            object-fit: contain;
-        }
-        .auth-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: calc(100vh - 120px);
-            padding: 20px 5%;
-            background: linear-gradient(160deg, #ffffff 0%, #F5F0FF 100%);
-        }
-        .auth-card {
-            width: 100%;
-            max-width: 440px;
-            background: #fff;
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid var(--br-border);
-            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.06);
-        }
-        .auth-header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .auth-title {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--br-text);
-            margin-bottom: 8px;
-        }
-        .auth-subtitle {
-            font-size: 0.92rem;
-            color: var(--br-muted);
-        }
-        .auth-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .form-label {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--br-text);
-        }
-        .form-input {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 8px;
-            border: 1.5px solid rgba(124, 58, 237, 0.2);
-            background: #fff;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--br-text);
-            outline: none;
-            transition: border-color .2s var(--ease);
-        }
-        .form-input:focus {
-            border-color: var(--br-purple);
-        }
-        .form-error {
-            font-size: 0.75rem;
-            color: #ef4444;
-            display: none;
-            margin-top: 2px;
-        }
-        .form-group.error .form-input {
-            border-color: #ef4444;
-        }
-        .form-group.error .form-error {
-            display: block;
-        }
-        .auth-actions {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--br-muted);
-        }
-        .auth-actions a {
-            color: var(--br-purple);
-            font-weight: 500;
-        }
-        .btn--submit {
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            border: none;
-            background: var(--br-purple);
-            color: #fff;
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: var(--shadow-btn);
-            transition: transform .2s var(--ease), filter .2s;
-        }
-        .btn--submit:hover {
-            transform: translateY(-1px);
-            filter: brightness(1.1);
-        }
-        .auth-footer {
-            text-align: center;
-            margin-top: 24px;
-            font-size: 0.875rem;
-            color: var(--br-muted);
-        }
-        .auth-footer a {
-            color: var(--br-purple-lt);
-            font-weight: 600;
-        }
-        /* Language Toggle */
-        .lang-toggle {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(124, 58, 237, 0.08);
-            padding: 4px 8px;
-            border-radius: var(--pill);
-            border: 1px solid var(--br-border);
-        }
-        .lang-toggle__opt {
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 8px;
-            border-radius: var(--pill);
-            cursor: pointer;
-            color: var(--br-muted);
-            transition: all .2s var(--ease);
-        }
-        .lang-toggle__opt.active {
-            background: var(--br-purple);
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css" />
 </head>
 <body>
 
     <header class="simple-header">
-        <a href="../index.html" class="simple-header__logo">
-            <img src="../assets/images/branradar.png" alt="BrandRadar logo" />
+        <a href="../index.html" class="header__back-btn" aria-label="Volver al inicio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
         </a>
+       
         <div class="lang-toggle" role="group" aria-label="Idioma / Language">
             <span class="lang-toggle__opt active" id="es-btn" onclick="setLanguage('es')">ES</span>
             <span class="lang-toggle__opt" id="en-btn" onclick="setLanguage('en')">EN</span>
@@ -178,31 +25,44 @@
 
     <main class="auth-container">
         <div class="auth-card">
-            <div class="auth-header">
-                <h1 class="auth-title" id="loginTitle">Iniciar sesión</h1>
-                <p class="auth-subtitle" id="loginSubtitle">Ingresa para gestionar tu monitoreo en tiempo real.</p>
-            </div>
+            <div class="auth-hero-panel">
+                <div class="auth-hero__logo">
+                    <img src="../assets/images/branradar.png" alt="BrandRadar Icon" />
+                </div>
+                <div class="auth-hero__content">
+                    <h1 class="auth-title" id="loginTitle">Hola, ¡Bienvenido!</h1>
+                    <p class="auth-hero__desc" id="loginSubtitle">Inicia sesión para gestionar tu monitoreo en tiempo real.</p>
+                </div>
+                <div></div> </div>
             
-            <form id="loginForm" class="auth-form" novalidate>
-                <div class="form-group" id="emailGroup">
-                    <label class="form-label" for="email" id="labelEmail">Correo electrónico</label>
-                    <input type="email" id="email" class="form-input" placeholder="hola@tudominio.com" required autocomplete="username" />
-                    <span class="form-error" id="errorEmail">Por favor, ingresa un correo electrónico real y válido.</span>
-                </div>
-                
-                <div class="form-group" id="passGroup">
-                    <label class="form-label" for="password" id="labelPass">Contraseña</label>
-                    <input type="password" id="password" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
-                    <span class="form-error" id="errorPass">La contraseña debe tener al menos 6 caracteres.</span>
+            <div class="auth-form-panel">
+                <div class="auth-header">
+                    <h2 class="auth-title" style="margin-bottom: 0;">Login</h2>
                 </div>
 
-               
+                <form id="loginForm" class="auth-form" novalidate>
+                    <div class="form-group" id="emailGroup">
+                        <label class="form-label" for="email" id="labelEmail">Correo electrónico</label>
+                        <input type="email" id="email" class="form-input" placeholder="hola@tudominio.com" required autocomplete="username" />
+                        <span class="form-error" id="errorEmail">Por favor, ingresa un correo electrónico real y válido.</span>
+                    </div>
+                    
+                    <div class="form-group" id="passGroup">
+                        <label class="form-label" for="password" id="labelPass">Contraseña</label>
+                        <input type="password" id="password" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
+                        <span class="form-error" id="errorPass">La contraseña debe tener al menos 6 caracteres.</span>
+                    </div>
 
-                <button type="submit" class="btn--submit" id="submitBtn">Iniciar sesión</button>
-            </form>
+                    <div class="auth-actions">
+                        <a href="#" id="forgotPass">¿Olvidaste tu contraseña?</a>
+                    </div>
 
-            <div class="auth-footer">
-                <span id="noAccount">¿No tienes una cuenta?</span> <a href="register.html" id="registerLink">Regístrate</a>
+                    <button type="submit" class="btn--submit" id="submitBtn">Iniciar sesión</button>
+                </form>
+
+                <div class="auth-footer">
+                    <span id="noAccount">¿No tienes una cuenta?</span> <a href="register.html" id="registerLink">Regístrate</a>
+                </div>
             </div>
         </div>
     </main>
@@ -211,90 +71,6 @@
         <p class="footer__copy">© 2026 BrandRadar. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        // Traducciones
-        const translations = {
-            es: {
-                pageTitle: "Iniciar Sesión – BrandRadar",
-                loginTitle: "Iniciar sesión",
-                loginSubtitle: "Ingresa para gestionar tu monitoreo en tiempo real.",
-                labelEmail: "Correo electrónico",
-                errorEmail: "Por favor, ingresa un correo electrónico real y válido.",
-                labelPass: "Contraseña",
-                errorPass: "La contraseña debe tener al menos 6 caracteres.",
-                
-                submitBtn: "Iniciar sesión",
-                noAccount: "¿No tienes una cuenta?",
-                registerLink: "Regístrate"
-            },
-            en: {
-                pageTitle: "Sign In – BrandRadar",
-                loginTitle: "Sign In",
-                loginSubtitle: "Log in to manage your real-time monitoring.",
-                labelEmail: "Email address",
-                errorEmail: "Please enter a real and valid email address.",
-                labelPass: "Password",
-                errorPass: "Password must be at least 6 characters long.",
-                forgotPass: "Forgot your password?",
-                submitBtn: "Sign In",
-                noAccount: "Don't have an account?",
-                registerLink: "Sign up"
-            }
-        };
-
-        let currentLang = 'es';
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            
-            // Cambiar botones visuales
-            document.getElementById('es-btn').classList.toggle('active', lang === 'es');
-            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
-
-            // Traducir textos
-            document.getElementById('pageTitle').innerText = translations[lang].pageTitle;
-            document.getElementById('loginTitle').innerText = translations[lang].loginTitle;
-            document.getElementById('loginSubtitle').innerText = translations[lang].loginSubtitle;
-            document.getElementById('labelEmail').innerText = translations[lang].labelEmail;
-            document.getElementById('errorEmail').innerText = translations[lang].errorEmail;
-            document.getElementById('labelPass').innerText = translations[lang].labelPass;
-            document.getElementById('errorPass').innerText = translations[lang].errorPass;
-            document.getElementById('forgotPass').innerText = translations[lang].forgotPass;
-            document.getElementById('submitBtn').innerText = translations[lang].submitBtn;
-            document.getElementById('noAccount').innerText = translations[lang].noAccount;
-            document.getElementById('registerLink').innerText = translations[lang].registerLink;
-        }
-
-        // Validación de datos al enviar
-        const loginForm = document.getElementById('loginForm');
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            let isValid = true;
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
-
-            // Limpiar clases de error
-            document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
-
-            // Validación de correo real (formato completo que revisa punto, arroba y dominio)
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!email.value || !emailRegex.test(email.value)) {
-                document.getElementById('emailGroup').classList.add('error');
-                isValid = false;
-            }
-
-            // Validación de contraseña
-            if (!password.value || password.value.length < 6) {
-                document.getElementById('passGroup').classList.add('error');
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('¡Datos validados correctamente! Iniciando sesión...');
-            }
-        });
-    </script>
+    <script src="login.js"></script>
 </body>
-
 </html>
