@@ -268,3 +268,17 @@
     background: linear-gradient(135deg, #4254F7, #B430D3);
     flex-shrink: 0;
 }
+
+/* ── Validación ─────────────────────────────────────────────── */
+.input--error {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.04);
+}
+
+.form-error {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    color: #ef4444;
+    font-weight: 500;
+}

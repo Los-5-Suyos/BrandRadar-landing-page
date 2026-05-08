@@ -1,5 +1,5 @@
 /* ============================================================
-   nav.js — Header, burger menu, language toggle
+nav.js — Header, burger menu, language toggle
    ============================================================ */
 (function () {
     'use strict';
@@ -20,13 +20,13 @@
         mobileMenu = document.createElement('div');
         mobileMenu.className = 'mobile-menu';
         mobileMenu.innerHTML = `
-          <ul>
+        <ul>
             <li><a href="index.html#features"   data-i18n="nav.features">Características</a></li>
             <li><a href="index.html#benefits"   data-i18n="nav.benefits">Beneficios</a></li>
             <li><a href="index.html#pricing"    data-i18n="nav.pricing">Precios</a></li>
             <li><a href="contact.html"          data-i18n="nav.contact">Contacto</a></li>
-          </ul>
-          <a href="#" class="btn btn--primary" style="align-self:flex-start;" data-i18n="nav.cta">Empezar ahora →</a>
+        </ul>
+        <a href="#" class="btn btn--primary" style="align-self:flex-start;" data-i18n="nav.cta">Empezar ahora →</a>
         `;
         const hero = document.querySelector('#hero') || document.querySelector('main') || document.body.firstElementChild;
         document.body.insertBefore(mobileMenu, hero);
@@ -79,8 +79,6 @@
         });
     });
 
-    // Apply on page load — solo si el idioma guardado es distinto al español
-    // (el HTML ya está escrito en español, no hace falta reemplazarlo)
     if (currentLang !== 'es') {
         applyTranslations(currentLang);
     } else {
@@ -102,7 +100,6 @@
                 }
             }
         });
-        // Update html lang attribute
         document.documentElement.lang = lang;
     }
 
@@ -110,7 +107,7 @@
         return path.split('.').reduce((acc, k) => (acc && acc[k] !== undefined ? acc[k] : undefined), obj);
     }
 
-    // Expose for other scripts
+
     window.BR_applyTranslations = applyTranslations;
 
 })();
