@@ -1,71 +1,97 @@
 /* ============================================================
-    RESPONSIVE — responsive.css
-    All breakpoints consolidated here
+    RESPONSIVE — BrandRadar Consolidated (Base: newnew.txt)
    ============================================================ */
 
-/* ─── 1024px ─────────────────────────────────────────────────── */
+img, video, canvas { max-width: 100%; height: auto; }
+
+/* ─── 1024px (Tablets) ────────────────────────────────────── */
 @media (max-width: 1024px) {
-    .features__grid        { grid-template-columns: repeat(2, 1fr); }
-    .benefits__grid        { grid-template-columns: repeat(2, 1fr); }
-    .footer__top           { grid-template-columns: 1fr 1fr; gap: 36px; }
-    .contact-section__inner{ grid-template-columns: 1fr; gap: 48px; }
-    .contact-form-card     { padding: 40px 36px; }
+    .features__grid, .benefits__grid { grid-template-columns: repeat(2, 1fr); }
+    .footer__top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .contact-section__inner { grid-template-columns: 1fr; gap: 48px; }
+    .contact-form-card { padding: 40px 36px; }
 }
 
-/* ─── 768px ──────────────────────────────────────────────────── */
+/* ─── 768px (Móviles y Tablets verticales) ────────────────── */
 @media (max-width: 768px) {
-    /* Nav */
+    /* --- Navegación (Original de tu archivo) --- */
     .nav__links, .nav > .btn--sm { display: none; }
-    .nav__burger  { display: flex; }
+    .nav__burger { display: flex; order: 3; }
+    .lang-toggle { order: 2; }
     .nav__logo-img { height: 42px; }
 
-    /* Hero */
-    #hero { padding: 32px 4% 60px; min-height: auto; }
-    .hero__inner { width: 100%; max-width: 100%; padding: 0; gap: 20px; }
-    .hero__heading { font-size: clamp(2rem, 9vw, 3.2rem); }
-    .hero__subtext { font-size: 1rem; white-space: normal; text-align: center; }
-    .hero__actions { flex-direction: column; width: 100%; }
-    .hero__actions .btn { width: 100%; justify-content: center; padding: 16px 28px; font-size: 1rem; }
-    .hero__blob--1 { width: 260px; height: 260px; top: -50px; left: -60px; }
-    .hero__blob--2 { width: 240px; height: 240px; bottom: -40px; right: -50px; }
+    /* --- Hero Principal (Original de tu archivo) --- */
+    #hero { padding: 32px 4% 60px; min-height: auto; text-align: center; }
+    .hero__inner { width: 100%; padding: 0; gap: 20px; }
+    .hero__heading { font-size: clamp(2rem, 9vw, 3.2rem); line-height: 1.2; }
+    .hero__subtext { font-size: 1rem; white-space: normal; margin: 0 auto; }
+    .hero__actions { flex-direction: column; width: 100%; gap: 12px; }
+    .hero__actions .btn { width: 100%; justify-content: center; }
 
-    /* Sections */
-    .features__grid      { grid-template-columns: 1fr; }
-    .benefits__grid      { grid-template-columns: 1fr; }
-    .dashboard__inner    { grid-template-columns: 1fr; gap: 40px; }
-    .testimonials__grid  { grid-template-columns: 1fr; }
-    .pricing__grid       { grid-template-columns: 1fr; }
-    .footer__top         { grid-template-columns: 1fr 1fr; }
-    .footer__bottom      { flex-direction: column; gap: 16px; text-align: center; }
-    .cta__actions        { flex-direction: column; width: 100%; }
-    .cta__actions .btn   { width: 100%; justify-content: center; }
-
-    /* Contact */
-    .contact-section__inner { grid-template-columns: 1fr; }
-    .contact-form-card       { padding: 32px 24px; }
-    .form-row                { grid-template-columns: 1fr; }
-    .contact-hero__title     { font-size: clamp(2rem, 8vw, 3rem); }
-}
-
-/* ─── 480px ──────────────────────────────────────────────────── */
-@media (max-width: 480px) {
-    .hero__heading    { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-    .hero__subtext    { font-size: 0.95rem; }
-    .footer__top      { grid-template-columns: 1fr; }
-    .contact-trust    { flex-direction: column; gap: 12px; }
-    .contact-form-card{ padding: 28px 20px; }
-    .btn              { font-size: 1rem; padding: 15px 28px; }
-}
-@media (max-width: 768px) {
-    .lang-toggle  { order: 2; }
-    .nav__burger  { order: 3; }
-    .btn--sm      { display: none; }
-
-
-    .mobile-menu .btn {
-        width: auto;
-        align-self: flex-start;
-        padding: 12px 24px;
-        font-size: 0.95rem;
+    /* --- Secciones y Grillas (Original de tu archivo) --- */
+    .features__grid, .benefits__grid, .dashboard__inner, 
+    .testimonials__grid, .pricing__grid { 
+        grid-template-columns: 1fr; 
     }
+    
+    .footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .cta__actions { flex-direction: column; width: 100%; }
+    .form-row { grid-template-columns: 1fr; }
+
+    /* ─── AJUSTE QUIRÚRGICO PARA LOGIN Y REGISTER ─── */
+    /* Estas reglas solo se activan en las páginas de login/register */
+    
+    .auth-container { 
+        padding: 10px !important; /* Reduce el espacio externo */
+        min-height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .auth-card {
+        flex-direction: column !important; /* Panel azul arriba, form abajo */
+        min-height: auto !important;
+        height: auto !important;
+        width: 100% !important;
+        max-width: 350px !important; /* Ancho ideal para iPhone SE */
+        margin: 10px auto !important;
+        overflow: visible !important; /* IMPORTANTE: No corta el botón de abajo */
+        border-radius: 16px !important;
+    }
+
+    /* Reducimos el panel azul al mínimo */
+    .auth-hero-panel {
+        width: 100% !important;
+        padding: 15px !important;
+        min-height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .auth-hero__title { font-size: 1.4rem !important; margin: 0 !important; }
+    .auth-hero__content p { display: none !important; } /* Ocultar para ganar 100px de espacio */
+
+    /* ELIMINAMOS LOS 64px DE PADDING QUE CORTAN EL CONTENIDO */
+    .auth-form-panel {
+        width: 100% !important;
+        padding: 20px 15px !important; /* Espacio compacto */
+    }
+
+    .auth-title { font-size: 1.3rem !important; margin-bottom: 8px !important; }
+    .auth-subtitle { font-size: 0.8rem !important; margin-bottom: 15px !important; }
+
+    /* Achicamos inputs para que el botón "suba" y no se corte */
+    .form-group { margin-bottom: 8px !important; }
+    .form-input { 
+        padding: 10px 12px !important; /* Más delgado */
+        height: 40px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .btn--submit { 
+        padding: 12px !important; 
+        margin-top: 5px !important; 
+    }
+
+    .auth-footer { margin-top: 15px !important; }
 }

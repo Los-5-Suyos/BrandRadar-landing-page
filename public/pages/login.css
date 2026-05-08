@@ -30,13 +30,12 @@ body {
 a { text-decoration: none; color: inherit; }
 
 .simple-header {
+    width: 100%;
+    padding: 20px 24px; /* El 24px le da aire a los dos lados */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 .header__back-btn {
@@ -66,12 +65,13 @@ a { text-decoration: none; color: inherit; }
 
 .lang-toggle {
     display: flex;
-    align-items: center;
     gap: 8px;
+    padding: 8px 12px;
     background: rgba(255, 255, 255, 0.05);
-    padding: 4px 8px;
-    border-radius: var(--pill);
+    border-radius: 100px;
     border: 1px solid var(--br-border);
+    /* ESTO ES LO QUE FALTA: */
+    margin-right: 15px;
 }
 
 .lang-toggle__opt {
@@ -90,16 +90,18 @@ a { text-decoration: none; color: inherit; }
 }
 
 .auth-container {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
-    padding: 40px 5%;
-    width: 100%;
+    padding: clamp(10px, 5vw, 40px); /* Ajuste fluido del espacio exterior */
+    background: var(--br-bg);
+    position: relative;
+    overflow-x: hidden;
 }
 
 .auth-card {
-    display: flex;
+   display: flex;
     width: 100%;
     max-width: 1000px;
     background: rgba(17, 24, 39, 0.7);
@@ -107,8 +109,8 @@ a { text-decoration: none; color: inherit; }
     border: 1px solid var(--br-border);
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    min-height: 580px;
-    overflow: hidden;
+    overflow: hidden; 
+    /* Quitamos el min-height fijo para que no se corte en móviles */
 }
 
 .auth-hero-panel {
@@ -164,12 +166,12 @@ a { text-decoration: none; color: inherit; }
 }
 
 .auth-form-panel {
-    width: 55%;
-    padding: 64px;
+  width: 55%;
+    padding: clamp(20px, 5vw, 64px); 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box; /* Esto asegura que el padding no robe espacio al texto */
 }
 
 .auth-header {
@@ -177,16 +179,27 @@ a { text-decoration: none; color: inherit; }
 }
 
 .auth-title {
-    font-family: var(--font-display);
-    font-size: 2rem;
+   font-family: var(--font-display);
+    /* clamp(mínimo, preferido, máximo) */
+    font-size: clamp(1.5rem, 5vw, 2.2rem) !important; 
     font-weight: 700;
-    margin-bottom: 8px;
     color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    width: 100%;
+    word-wrap: break-word; /* Por si el texto es muy largo */
 }
 
 .auth-subtitle {
-    font-size: 0.875rem;
+   font-size: clamp(0.85rem, 2vw, 1rem) !important;
     color: var(--br-muted);
+    margin-bottom: 32px;
+    line-height: 1.5;
+    width: 100% !important;
+    display: block !important;
+    white-space: normal !important; /* PERMITE que el texto baje si no cabe */
+    overflow: visible !important;    /* EVITA que se coma las palabras */
+    word-wrap: break-word;          /* Rompe palabras si es ultra necesario */
 }
 
 .auth-form {
@@ -196,9 +209,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que el grupo ocupe todo el ancho */
+    box-sizing: border-box;
 }
 
 .form-label {
@@ -208,16 +221,15 @@ a { text-decoration: none; color: inherit; }
 }
 
 .form-input {
-    width: 100%;
-    padding: 15px 18px;
+   width: 100% !important; /* Fuerza a que no se salga de su contenedor */
+    max-width: 100%;       /* Garantiza que no desborde */
+    padding: 14px 16px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(15, 23, 42, 0.6);
-    font-family: var(--font-body);
-    font-size: 0.95rem;
     color: #fff;
-    outline: none;
-    transition: all .2s var(--ease);
+    box-sizing: border-box; /* ESTA ES LA CLAVE: hace que el 100% incluya el padding */
+    display: block;
 }
 
 .form-input:focus {
