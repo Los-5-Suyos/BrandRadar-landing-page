@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Iniciar Sesión – BrandRadar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+
+    <header class="simple-header">
+        <a href="../index.html" class="header__back-btn" aria-label="Volver al inicio">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </a>
+        
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+            <span class="lang-toggle__opt active" id="es-btn" onclick="setLanguage('es')">ES</span>
+            <span class="lang-toggle__opt" id="en-btn" onclick="setLanguage('en')">EN</span>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card-wrapper">
+        <div class="auth-mobile-logo">
+            <img src="../assets/images/light-logo.png" alt="BrandRadar" />
+        </div>
+        <div class="auth-card">
+            <div class="auth-hero-panel">
+                <div class="auth-hero__logo">
+                    <img src="../assets/images/light-logo.png" alt="BrandRadar Icon" />
+                </div>
+                <div class="auth-hero__content">
+                    <h1 class="auth-title" id="loginTitle">Hola, ¡Bienvenido!</h1>
+                    <p class="auth-hero__desc" id="loginSubtitle">Inicia sesión para gestionar tu monitoreo en tiempo real.</p>
+                </div>
+                <div></div>
+            </div>
+            
+            <div class="auth-form-panel">
+                <div class="auth-header">
+                    <h2 class="auth-title" style="margin-bottom: 0;">Login</h2>
+                </div>
+
+                <form id="loginForm" class="auth-form" novalidate>
+                    <div class="form-group" id="emailGroup">
+                        <label class="form-label" for="email" id="labelEmail">Correo electrónico</label>
+                        <input type="email" id="email" class="form-input" placeholder="hola@tudominio.com" required autocomplete="username" />
+                        <span class="form-error" id="errorEmail">Por favor, ingresa un correo electrónico real y válido.</span>
+                    </div>
+                    
+                    <div class="form-group" id="passGroup">
+                        <label class="form-label" for="password" id="labelPass">Contraseña</label>
+                        <input type="password" id="password" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
+                        <span class="form-error" id="errorPass">La contraseña debe tener al menos 6 caracteres.</span>
+                    </div>
+
+                    <div class="auth-actions">
+                        <a href="#" id="forgotPass">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn--submit" id="submitBtn">Iniciar sesión</button>
+                </form>
+
+                <div class="auth-footer">
+                    <span id="noAccount">¿No tienes una cuenta?</span> <a href="register.html" id="registerLink">Regístrate</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer__copy">© 2026 BrandRadar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
