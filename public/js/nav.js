@@ -21,13 +21,15 @@ nav.js — Header, burger menu, language toggle
         mobileMenu.className = 'mobile-menu';
         mobileMenu.innerHTML = `
         <ul>
-            <li><a href="index.html#features"   data-i18n="nav.features">Características</a></li>
-            <li><a href="index.html#benefits"   data-i18n="nav.benefits">Beneficios</a></li>
-            <li><a href="index.html#pricing"    data-i18n="nav.pricing">Precios</a></li>
-            <li><a href="contact.html"          data-i18n="nav.contact">Contacto</a></li>
-        </ul>
-        <a href="#" class="btn btn--primary" style="align-self:flex-start;" data-i18n="nav.cta">Empezar ahora →</a>
-        `;
+          <li><a href="/#features" data-i18n="nav.features">Características</a></li>
+          <li><a href="/#benefits" data-i18n="nav.benefits">Beneficios</a></li>
+          <li><a href="/#pricing" data-i18n="nav.pricing">Precios</a></li>
+          <li><a href="/pages/contact.html" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <a href="/pages/login.html" class="btn btn--primary" style="align-self:flex-start;" data-i18n="nav.cta">
+          Empezar ahora →
+      </a>
+      `;
         const hero = document.querySelector('#hero') || document.querySelector('main') || document.body.firstElementChild;
         document.body.insertBefore(mobileMenu, hero);
     }
